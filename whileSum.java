@@ -18,4 +18,5 @@ public class whileSum {
         
     }
 }
-//Create a program that makes the user input integers 5 times and print the sum of the 5 integers 
+//Create a program that makes the user input positive integers, the program will only end if the user inputs a negative integer.
+//Print only the sum of the positive integers entered by the user(ignore the negative integer)
