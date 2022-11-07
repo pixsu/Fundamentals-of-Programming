@@ -6,12 +6,12 @@ public class whileSum {
 
         int sum=0, num;
 
-        System.out.println("Enter number: ");
+        System.out.print("Enter number: ");
         num = sc.nextInt();
 
         while (num>=0){
             sum = num+sum;
-            System.out.println("Enter number: ");
+            System.out.print("Enter number: ");
             num = sc.nextInt();
         }
         System.out.println("Sum: "+sum);
