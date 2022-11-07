@@ -7,7 +7,7 @@ public class DoWhileSum {
        
         do{
             sum += num;
-            System.out.println("Enter number: ");
+            System.out.print("Enter number: ");
             num=sc.nextInt();
         }
         while(num>=0);
