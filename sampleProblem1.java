@@ -5,7 +5,7 @@ public class sampleProblem1 {
         Scanner sc = new Scanner(System.in);
 
         double milk=50.00,coffee=15.00,tea=25.00;
-        String choose="",choosec="",chooset="",order="";
+        String choose="",order="";
         
         System.out.println("Welcome to Java Store!");
         System.out.print("Enter customer's name: ");
@@ -68,11 +68,11 @@ public class sampleProblem1 {
                     double changec = paymentc - totalc;
                     System.out.println("Your change is "+changec+", thank you for ordering!");
                     System.out.print("Do you want another transaction?");
-                    choosec = sc.next();
-                    if(choosec.equalsIgnoreCase("no")){
+                    choose = sc.next();
+                    if(choose.equalsIgnoreCase("no")){
                         System.exit(0);
                     }
-                    else if(choosec.equalsIgnoreCase("yes"))
+                    else if(choose.equalsIgnoreCase("yes"))
                     break;
                     else{
                         System.out.println("Invalid input");
@@ -100,11 +100,11 @@ public class sampleProblem1 {
                     double changet =paymentt - totalt;
                     System.out.println("Your change is "+changet+", thank you for ordering!");
                     System.out.print("Do you want another transaction?");
-                    chooset = sc.next();
-                    if(chooset.equalsIgnoreCase("no")){
+                    choose = sc.next();
+                    if(choose.equalsIgnoreCase("no")){
                         System.exit(0);
                     }
-                    else if(chooset.equalsIgnoreCase("yes"))
+                    else if(choose.equalsIgnoreCase("yes"))
                     break;
                     else{
                         System.out.println("Invalid input");
@@ -116,6 +116,6 @@ public class sampleProblem1 {
     }
 
 
-    }
+    } 
 }
 //finals sample problem #1 
