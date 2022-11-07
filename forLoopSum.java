@@ -5,13 +5,13 @@ public class forLoopSum {
 
         int num,n1=0,sum=0;
 
-        System.out.println("Enter number: ");
+        System.out.print("Enter number: ");
         num = sc.nextInt();
 
         for (n1=0; num>=n1;)
         {
             sum = num + sum;
-            System.out.println("Enter number: ");
+            System.out.print("Enter number: ");
             num = sc.nextInt();
         }
         System.out.println("Sum: "+sum);
