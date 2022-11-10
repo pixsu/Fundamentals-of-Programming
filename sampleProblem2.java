@@ -5,7 +5,7 @@ public class sampleProblem2{
    Scanner sc = new Scanner(System.in);
 
    double balance = 1000;
-   String transaction="";
+   String transaction;
 
    System.out.print("Enter PIN: ");
    int pin = sc.nextInt();
