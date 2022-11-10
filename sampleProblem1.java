@@ -1,11 +1,11 @@
 import java.util.*;
 public class sampleProblem1 {
-    public static void main(String[] args){
+    public static void main(String args[]){
         
         Scanner sc = new Scanner(System.in);
 
-        double milk=50.00,coffee=15.00,tea=25.00;
-        String choose="",order="";
+        double[] price={15.00,50.00,25.00};
+        String choose,order;
         
         System.out.println("Welcome to Java Store!");
         System.out.print("Enter customer's name: ");
@@ -23,22 +23,23 @@ public class sampleProblem1 {
             case "M":
             {
                 System.out.print("How many orders of milk: ");
-                double quantityM = sc.nextDouble();
-                double total = quantityM * milk;
+                double quantity = sc.nextDouble();
+                double total = quantity * price[1];
                 System.out.println("The total amount to be pay is: "+total);
                 System.out.print("Enter payment: ");
                 double payment = sc.nextDouble();
 
                 if(total>=payment){
-                    System.out.println("Insufficient funds");
+                    System.out.println("Insufficient funds!");
                     System.exit(0);
                 }
                 else{
                     double change = payment - total;
                     System.out.println("Your change is "+change+", thank you for ordering!");
-                    System.out.print("Do you want another transaction?");
+                    System.out.print("Do you want another transaction? ");
                     choose = sc.next();
                     if(choose.equalsIgnoreCase("no")){
+                        System.out.println("Thank you!");
                         System.exit(0);
                     }
                     else if(choose.equalsIgnoreCase("yes"))
@@ -54,22 +55,23 @@ public class sampleProblem1 {
             case "c":
             {
                 System.out.print("How many orders of coffee: ");
-                double quantityC = sc.nextDouble();
-                double totalc= quantityC * coffee;
-                System.out.println("The total amount to be pay is: "+totalc);
+                double quantity = sc.nextDouble();
+                double total= quantity * price[0];
+                System.out.println("The total amount to be pay is: "+total);
                 System.out.print("Enter payment: ");
-                double paymentc = sc.nextDouble();
+                double payment = sc.nextDouble();
 
-                if(totalc>=paymentc){
-                    System.out.println("Insufficient funds");
+                if(total>=payment){
+                    System.out.println("Insufficient funds!");
                     System.exit(0);
                 }
                 else{
-                    double changec = paymentc - totalc;
-                    System.out.println("Your change is "+changec+", thank you for ordering!");
-                    System.out.print("Do you want another transaction?");
+                    double change = payment - total;
+                    System.out.println("Your change is "+change+", thank you for ordering!");
+                    System.out.print("Do you want another transaction? ");
                     choose = sc.next();
                     if(choose.equalsIgnoreCase("no")){
+                        System.out.println("Thank you!");
                         System.exit(0);
                     }
                     else if(choose.equalsIgnoreCase("yes"))
@@ -86,32 +88,36 @@ public class sampleProblem1 {
             case "t":
             {
                 System.out.print("How many orders of tea: ");
-                double quantityT = sc.nextDouble();
-                double totalt = quantityT * tea;
-                System.out.println("The total amount to be pay is: "+totalt);
+                double quantity = sc.nextDouble();
+                double total = quantity * price[2];
+                System.out.println("The total amount to be pay is: "+total);
                 System.out.print("Enter payment: ");
-                double paymentt = sc.nextDouble();
+                double payment = sc.nextDouble();
 
-                if(totalt>=paymentt){
-                    System.out.println("Insufficient funds");
+                if(total>=payment){
+                    System.out.println("Insufficient funds!");
                     System.exit(0);
                 }
                 else{
-                    double changet =paymentt - totalt;
-                    System.out.println("Your change is "+changet+", thank you for ordering!");
-                    System.out.print("Do you want another transaction?");
+                    double change =payment - total;
+                    System.out.println("Your change is "+change+", thank you for ordering!");
+                    System.out.print("Do you want another transaction? ");
                     choose = sc.next();
                     if(choose.equalsIgnoreCase("no")){
+                        System.out.println("Thank you!");
                         System.exit(0);
                     }
                     else if(choose.equalsIgnoreCase("yes"))
                     break;
                     else{
                         System.out.println("Invalid input");
-                        System.exit(0);
+                        System.exit(0);            
                     }
                 }
             }
+            default:
+            System.out.println("Invalid input!");
+
         }        
     }
 
