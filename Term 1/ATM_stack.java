@@ -1,5 +1,5 @@
 import java.util.*;
-public class ATM_stack2 {
+public class ATM_stack {
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
 
